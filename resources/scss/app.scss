@@ -1,0 +1,47 @@
+$theme-colors: (
+  "danger": #EF3B2D,
+  "darker": #1A202C,
+  "dark": #2D3748,
+);
+
+@import "bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Comfortaa", "Nunito", "Poppins", sans-serif;
+  background-color: var(--darker);
+  color: var(--light);
+}
+a { text-decoration: none !important; cursor: pointer }
+.text-white-75, .nav-links a, ::placeholder { color: rgba(255, 255, 255, .75) !important; }
+a.text-white-75:hover, .nav-links a:hover { color: var(--light) !important; }
+.text-white-25 { color: rgba(255, 255, 255, .25) !important; }
+
+::placeholder {
+  font-weight: 300;
+}
+:focus::placeholder { color: transparent !important; }
+a, ::placeholder {  transition: .25s; }
+.form-control.dark {
+  color: var(--light) !important;
+  background-color: var(--dark) !important;
+  border: none;
+}
+.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.text-shadow-sm { text-shadow: 2px 2px 1px rgba(0, 0, 0, .1); }
+.border-white-15, .form-control.border-white-15.dark:focus { border-color: rgba(255, 255, 255, .15) !important; }
+.border-white-30 { border-color: rgba(255, 255, 255, .30) !important; }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .col-6, form .col-12 { margin-bottom: 1.5em; }
+textarea { resize: none; }
+.smaller { font-size: 8pt; }
+.md-13 { font-size: 13pt !important; }
+.min-vh-75 { min-height: 75vh; }
+.rounded-lg { border-radius: 15px !important; }
+img { max-width: 100%; }
